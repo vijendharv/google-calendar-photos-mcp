@@ -1,0 +1,17 @@
+# Ignore Python virtual environment
+google-calendar-photos-mcp/
+*.json
+*.pickle
+
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+
+# Environment variables
+.env
+
+# VS Code project settings
+.vscode/
+
+# Mac system files
+.DS_Store
