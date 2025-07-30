@@ -17,7 +17,11 @@ sys.path.insert(0, str(Path(__file__).parent))
 # Configure logging to see what's happening
 logging.basicConfig(
     level=logging.DEBUG,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.StreamHandler(sys.stdout),
+        logging.FileHandler('test_mcp_server.log')
+    ]
 )
 logger = logging.getLogger('mcp-test')
 
