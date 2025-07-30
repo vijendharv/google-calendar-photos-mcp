@@ -17,8 +17,8 @@ Your configuration should look like this:
   "mcpServers": {
     "google-calendar-photos": {
       "command": "python3",
-      "args": ["/Users/vijayv/Personal/Vijay/AI/google-calendar-photos-mcp/main.py"],
-      "cwd": "/Users/vijayv/Personal/Vijay/AI/google-calendar-photos-mcp"
+      "args": ["/PathTo/google-calendar-photos-mcp/main.py"],
+      "cwd": "/PathTo/google-calendar-photos-mcp"
     }
   }
 }
@@ -41,9 +41,9 @@ If you're using a virtual environment, activate it or use the full path:
 {
   "mcpServers": {
     "google-calendar-photos": {
-      "command": "/Users/vijayv/Personal/Vijay/AI/google-calendar-photos-mcp/google-calendar-photos-mcp/bin/python3",
-      "args": ["/Users/vijayv/Personal/Vijay/AI/google-calendar-photos-mcp/main.py"],
-      "cwd": "/Users/vijayv/Personal/Vijay/AI/google-calendar-photos-mcp"
+      "command": "/PathTo/google-calendar-photos-mcp/google-calendar-photos-mcp/bin/python3",
+      "args": ["/PathTo/google-calendar-photos-mcp/main.py"],
+      "cwd": "/PathTo/google-calendar-photos-mcp"
     }
   }
 }
@@ -54,7 +54,7 @@ If you're using a virtual environment, activate it or use the full path:
 ### Step 1: Test Your MCP Server Independently
 Run this in your terminal:
 ```bash
-cd /Users/vijayv/Personal/Vijay/AI/google-calendar-photos-mcp
+cd /PathTo/google-calendar-photos-mcp
 python3 test_mcp_server.py
 ```
 
@@ -62,7 +62,7 @@ This will run diagnostic tests and tell you if there are any issues with your se
 
 ### Step 2: Test MCP Server Startup
 ```bash
-cd /Users/vijayv/Personal/Vijay/AI/google-calendar-photos-mcp
+cd /PathTo/google-calendar-photos-mcp
 python3 main.py
 ```
 
