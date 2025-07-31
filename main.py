@@ -8,8 +8,6 @@ import asyncio
 import logging
 import sys
 import os
-from typing import Dict, Any, Optional
-import json
 
 # MCP imports
 import mcp.server.stdio

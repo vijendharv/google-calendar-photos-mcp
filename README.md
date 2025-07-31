@@ -261,17 +261,6 @@ google-calendar-photos-mcp/
 
 ## 🔧 Configuration
 
-### Environment Variables
-
-```bash
-# Optional: Set custom paths
-export GOOGLE_CREDENTIALS_PATH="/path/to/credentials.json"
-export GOOGLE_TOKEN_PATH="/path/to/token.pickle"
-
-# Optional: Enable debug logging
-export MCP_LOG_LEVEL="DEBUG"
-```
-
 ### Logging Configuration
 
 The server uses Python's standard logging module. You can adjust log levels in `main.py`:
@@ -365,22 +354,9 @@ python3 -c "from mcp_tools import get_all_tools; print(f'Found {len(get_all_tool
 python3 -c "from tool_handlers import ToolHandlers; print('Tool handlers loaded successfully')"
 ```
 
-## 📊 Performance
-
-### Rate Limits
+## Rate Limits
 - Google Calendar API: 1,000,000 requests per day
 - Google Photos API: 10,000 requests per day
-- Server implements automatic backoff on rate limit errors
-
-### Response Times
-- Calendar operations: ~200-500ms
-- Photos listing: ~500-1000ms
-- Photo downloads: Variable based on file size
-
-### Memory Usage
-- Base server: ~50MB
-- Additional per concurrent request: ~5-10MB
-- Token storage: <1KB
 
 ## 🤝 Contributing
 
@@ -414,14 +390,6 @@ MIT License - see [LICENSE](LICENSE) file for details.
 - [Google Calendar API Documentation](https://developers.google.com/calendar/api)
 - [Google Photos API Documentation](https://developers.google.com/photos)
 - [Google API Python Client Documentation](https://googleapis.github.io/google-api-python-client/)
-
-## 📞 Support
-
-For issues and questions:
-1. Check the troubleshooting section above
-2. Review debug logs with `MCP_LOG_LEVEL=DEBUG`
-3. Test individual components as described
-4. Open an issue with detailed error information
 
 ---
 
