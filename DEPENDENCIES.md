@@ -308,13 +308,13 @@ pip install --upgrade google-api-python-client google-api-core
 ### Testing After Upgrades
 ```bash
 # Test basic functionality
-python test_mcp_server.py
+python3 test_mcp_server.py
 
 # Test authentication
-python -c "from google_api_client import GoogleAPIClient; import asyncio; asyncio.run(GoogleAPIClient().authenticate())"
+python3 -c "from google_api_client import GoogleAPIClient; import asyncio; asyncio.run(GoogleAPIClient().authenticate())"
 
 # Test MCP protocol
-python main.py --help
+python3 main.py --help
 ```
 
 ## 📚 Additional Resources

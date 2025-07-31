@@ -79,10 +79,10 @@ On first run, the server will automatically:
 
 ```bash
 # Start the MCP server
-python main.py
+python3 main.py
 
 # For help and available options
-python main.py --help
+python3 main.py --help
 ```
 
 The server communicates via stdin/stdout using the MCP protocol and is designed to be used with MCP clients.
@@ -129,13 +129,13 @@ Add this configuration to your Claude Desktop MCP settings file:
 
 ```bash
 # Run basic connectivity test
-python test_mcp_server.py
+python3 test_mcp_server.py
 
 # Run startup diagnostics
-python startup_test.py
+python3 startup_test.py
 
 # Test path resolution
-python test_path_resolution.py
+python3 test_path_resolution.py
 ```
 
 ## 📋 Tool Reference
@@ -338,7 +338,7 @@ The server requests minimal necessary scopes:
 1. Verify Python path in client configuration
 2. Check file permissions on `main.py`
 3. Ensure all dependencies are installed
-4. Test server standalone: `python main.py --help`
+4. Test server standalone: `python3 main.py --help`
 
 ### Debug Mode
 
@@ -356,13 +356,13 @@ logging.basicConfig(level=logging.DEBUG)
 
 ```bash
 # Test Google API authentication
-python -c "from google_api_client import GoogleAPIClient; import asyncio; asyncio.run(GoogleAPIClient().authenticate())"
+python3 -c "from google_api_client import GoogleAPIClient; import asyncio; asyncio.run(GoogleAPIClient().authenticate())"
 
 # Test MCP tool definitions
-python -c "from mcp_tools import get_all_tools; print(f'Found {len(get_all_tools())} tools')"
+python3 -c "from mcp_tools import get_all_tools; print(f'Found {len(get_all_tools())} tools')"
 
 # Test tool handlers initialization
-python -c "from tool_handlers import ToolHandlers; print('Tool handlers loaded successfully')"
+python3 -c "from tool_handlers import ToolHandlers; print('Tool handlers loaded successfully')"
 ```
 
 ## 📊 Performance
@@ -390,9 +390,6 @@ python -c "from tool_handlers import ToolHandlers; print('Tool handlers loaded s
 # Install development dependencies
 pip install -r requirements.txt
 pip install black flake8 pytest
-
-# Run tests
-python -m pytest tests/
 
 # Format code
 black *.py
